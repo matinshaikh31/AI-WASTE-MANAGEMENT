@@ -184,7 +184,7 @@ export default function ReportPage() {
       const response = await result.response;
 
       // Convert the response into text format
-      const text = response.text();
+      const text = response.text().replace(/```json|```/g, "").trim();
 
       try {
         // Parse the response text into JSON format to extract the waste analysis data

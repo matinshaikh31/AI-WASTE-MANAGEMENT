@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import {
   ArrowRight,
   Leaf,
+  Trash2,
   Recycle,
   Users,
   Coins,
@@ -21,7 +22,7 @@ function AnimatedGlobe() {
       <div className="absolute inset-2 rounded-full bg-green-400 opacity-40 animate-ping"></div>
       <div className="absolute inset-4 rounded-full bg-green-300 opacity-60 animate-spin"></div>
       <div className="absolute inset-6 rounded-full bg-green-200 opacity-80 animate-bounce"></div>
-      <Leaf className="absolute inset-0 m-auto h-16 w-16 text-green-600 animate-pulse" />
+      <Trash2 className="absolute inset-0 m-auto h-16 w-16 text-green-600 animate-pulse" />
     </div>
   );
 }
@@ -38,9 +39,11 @@ export default function Home() {
           Join our community in making waste management more efficient and
           rewarding!
         </p>
+        <a href="/report">
         <Button className="bg-green-600 hover:bg-green-700 text-white text-lg py-6 px-10">
           Report Waste
         </Button>
+        </a>
       </section>
       <section className="grid md:grid-cols-3 gap-10 mb-20">
         <FeatureCard

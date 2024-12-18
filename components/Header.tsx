@@ -8,6 +8,7 @@ import {
   Menu,
   Coins,
   Leaf,
+  Trash2,
   Search,
   Bell,
   User,
@@ -168,7 +169,7 @@ export default function Header({ onMenuClick, totalEarning }: HeaderProps) {
             <Menu className="h-6 w-6" />
           </Button>
           <Link href="/">
-            <Leaf className="h-6 w-6 md:h-8 md:w-8 text-green-500 mr-1 md:mr-2" />
+            <Trash2 className="h-6 w-6 md:h-8 md:w-8 text-green-500 mr-1 md:mr-2" />
             <span className="font-bold text-base md:text-lg text-gray-800" />
           </Link>
         </div>
