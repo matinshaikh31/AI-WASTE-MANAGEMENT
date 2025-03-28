@@ -190,7 +190,11 @@ export default function CollectPage() {
 
       const result = await model.generateContent([prompt, ...imageParts]);
       const response = await result.response;
-      const text = response.text();
+      // const text = response.text().trim();
+      const text = response
+        .text()
+        .replace(/```json|```/g, "")
+        .trim();
 
       try {
         const parsedResult = JSON.parse(text);

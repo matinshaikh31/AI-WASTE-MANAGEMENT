@@ -201,13 +201,16 @@ export default function ReportPage() {
 
           // Set the verification status to "success" since the process completed successfully
           setVerificationStatus("success");
-
+          
           // Update the newReports state with the verified waste type and quantity
           setNewReports({
             ...newReports,
             type: parsedResult.wasteType,
             amount: parsedResult.quantity,
+ 
+            
           });
+          console.log(reports);
         } else {
           // If the result does not contain valid data, log an error and set status to failure
           console.error("Invalid verification result:", parsedResult);
